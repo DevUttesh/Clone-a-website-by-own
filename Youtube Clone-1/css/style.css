@@ -1,0 +1,282 @@
+/* <!-- ------------------------------common css:-------------------------------------  --> */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main--color: #fd4c29;
+}
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 90px;
+}
+/* <!-- ------------------------------top nav :-------------------------------------  --> */
+.top-nav {
+  background-color: var(--main--color);
+}
+/* <!-- ------------------------------Navbar:-------------------------------------  --> */
+
+/*----------------------------- carousel -----------------------------*/
+.carousel-img img{
+  min-height: 100vh !important;
+}
+.carousel-inner-div {
+  position: relative;
+  height: 100vh;
+}
+/* carousel black shadow  */
+.carousel-item-div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+}
+.carousel-item-div .carousel-img {
+  width: 100%;
+  height: 100vh;
+}
+
+/* carousel next button  */
+.next-icon {
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  /* color: white !important; */
+  width: 60px;
+  height: 60px;
+}
+.prev-icon {
+  width: 60px;
+  height: 60px;
+}
+.carousel-control-next .next-icon:hover {
+  background-color: #fd4c29 !important;
+}
+
+/* carousel prev button  */
+.carousel-control-prev .prev-icon:hover {
+  background-color: #fd4c29 !important;
+}
+
+/* overlay-block  */
+.overlay-block {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* <!-- -----------------------------section-1:-------------------------------------  --> */
+/* <!-- -----------------------------section-2:about-------------------------------------  --> */
+/* <!-- -----------------------------extra section-------------------------------------  --> */
+.extra-section {
+  min-height: 40vh !important;
+  background: url(./images/carousel/carousel-img-1.avif) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.extra-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--main--color);
+  height: 100%;
+  opacity: 0.7;
+  z-index: 1;
+}
+/* <!-- -----------------------------section-3:-------------------------------------  --> */
+/* <!-- -----------------------------section-4:portfolio-------------------------------------  --> */
+.project {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(
+    to bottom,
+    hsl(206, 69%, 12%, 0),
+    rgba(9, 32, 50, 0.8)
+  );
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 32px;
+}
+
+.project h1,
+.project h6 {
+  color: #fff;
+}
+
+.project h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.project h6::before {
+  content: "";
+  height: 2px;
+  width: 24px;
+  background-color: var(--main--color);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+/* project-carousel dots  */
+.owl-carousel .active span {
+  background: var(--main--color) !important;
+}
+
+/* <!-- -----------------------------section-5:team-------------------------------------  --> */
+
+/* style team icons  */
+.team-social li a{
+  display: block;
+  width: 45px;
+  height: 45px;
+}
+.team-social li a:hover{
+  background: #fff !important;
+  color: var(--main--color) !important;
+}
+/* ----------------- */
+
+/* team hover shade style  */
+.team{
+  position: relative;
+}
+
+.team .team-div::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background: var(--main--color);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.team:hover .team-div::before{
+  height: 100%;
+  opacity: 0.7;
+}
+
+/* team hover icon style  */
+.team .team-content-div{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.team:hover .team-content-div{
+  top: 50%;
+  opacity: 1;
+}
+/* -------------------------- */
+
+/* <!-- -----------------------------section-6:reviews-------------------------------------  --> */
+#reviews {
+  background: url(./images/carousel/carousel-img-3.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.review-overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.carousel .carousel-indicators .active {
+  background-color: #fd4c29 !important;
+}
+/* <!-- -----------------------------section-7:blog-------------------------------------  --> */
+.blog-overlay-button {
+  background-color: var(--main--color);
+  width: 115px;
+}
+.blog-overlay-parent {
+  position: relative;
+}
+.blog-overlay-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* <!-- -----------------------------Modal :-------------------------------------  --> */
+
+
+input[type="text"]:focus{
+  border-color: rgb(105, 7, 7);
+  background-color: #fff !important;
+  color: black !important;
+  opacity: 100;
+}
+input[type="email"]:focus{
+  border-color: rgb(105, 7, 7);
+  background-color: #fff !important;
+}
+textarea:focus{
+  border-color: rgb(105, 7, 7) !important;
+  background-color: #fff !important;
+}
+
+/* <!-- -----------------------------Footer :-------------------------------------  --> */
+footer {
+  height: 55vh;
+  background: url(./images/carousel/carousel-img-1.avif) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+footer::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55vh;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55vh;
+}
+
+.footer-icon {
+  width: 50px;
+  height: 50px;
+}
+.footer-icon:hover {
+  width: 50px;
+  height: 50px;
+  background: white !important;
+  color: var(--main--color);
+  transition: 0.3s ease-in;
+}
